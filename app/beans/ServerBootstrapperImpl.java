@@ -139,7 +139,7 @@ public class ServerBootstrapperImpl implements ServerBootstrapper
 		ServerNode serverNode = new ServerNode( server );
 		
 		logger.info("Server created, wait 10 seconds before starting to bootstrap machine: {}" ,  serverNode.getPublicIP() );
-		Utils.threadSleep(10000); // need for a network interfaces initialization
+		Utils.threadSleep(60000); // need for a network interfaces initialization
 		
 		// bootstrap machine: firewall, jvm, start cloudify
 		bootstrapMachine( serverNode );
